@@ -1,0 +1,22 @@
+[
+	{
+		"name": "org.springframework.samples.petclinic.owner.Pet",
+		"allDeclaredConstructors": true,
+		"allDeclaredMethods": true
+	},
+	{
+		"name": "org.springframework.samples.petclinic.owner.Owner",
+		"allDeclaredConstructors": true,
+		"allDeclaredMethods": true
+	},
+	{
+		"name": "org.springframework.samples.petclinic.vet.Vet",
+		"allDeclaredConstructors": true,
+		"allDeclaredMethods": true
+	},
+	{
+		"name": "org.springframework.samples.petclinic.visit.Visit",
+		"allDeclaredConstructors": true,
+		"allDeclaredMethods": true
+	}
+]

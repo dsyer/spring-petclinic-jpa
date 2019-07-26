@@ -1,0 +1,8 @@
+{
+  "resources": [
+    {"pattern": ".*.html"},
+    {"pattern": "messages/.*"},
+    {"pattern": "static/.*"},
+    {"pattern": "templates/.*"}
+  ]
+}
