@@ -52,7 +52,7 @@ public class VetControllerTests {
 	@Test
 	public void testShowResourcesVetList() throws Exception {
 		client.get().uri("/vets").accept(MediaType.APPLICATION_JSON).exchange().expectStatus().isOk().expectHeader()
-				.contentType(MediaType.APPLICATION_JSON_UTF8).expectBody().jsonPath("$.vetList[0].id", 1);
+				.contentType(MediaType.APPLICATION_JSON).expectBody().jsonPath("$.vetList[0].id", 1);
 	}
 
 }
