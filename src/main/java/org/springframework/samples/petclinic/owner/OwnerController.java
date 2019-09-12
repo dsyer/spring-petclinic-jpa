@@ -23,6 +23,7 @@ import javax.validation.Valid;
 import reactor.core.publisher.Mono;
 import reactor.core.scheduler.Schedulers;
 
+import org.springframework.samples.petclinic.visit.VisitRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -44,9 +45,11 @@ class OwnerController {
 	private static final String VIEWS_OWNER_CREATE_OR_UPDATE_FORM = "owners/createOrUpdateOwnerForm";
 
 	private final OwnerRepository owners;
+	private final VisitRepository visits;
 
-	public OwnerController(OwnerRepository clinicService) {
+	public OwnerController(OwnerRepository clinicService, VisitRepository visits) {
 		this.owners = clinicService;
+		this.visits = visits;
 	}
 
 	@InitBinder
@@ -142,7 +145,12 @@ class OwnerController {
 			Map<String, Object> model) {
 		return Mono.fromCallable(() -> this.owners.findById(ownerId))
 				.subscribeOn(Schedulers.elastic())
-				.doOnNext(owner -> model.put("owner", owner))
+				.doOnNext(owner -> {
+					for (Pet pet : owner.getPets()) {
+						pet.setVisitsInternal(visits.findByPetId(pet.getId()));
+					}
+					model.put("owner", owner); 
+				})
 				.then(Mono.just("owners/ownerDetails"));
 	}
 

@@ -69,6 +69,7 @@ class VisitController {
 		return Mono.<Void>fromRunnable(() -> {
 			Visit visit = new Visit();
 			Pet pet = this.pets.findById(petId);
+			pet.setVisitsInternal(this.visits.findByPetId(petId));
 			pet.addVisit(visit);
 			model.put("pet", pet);
 			model.put("visit", visit);

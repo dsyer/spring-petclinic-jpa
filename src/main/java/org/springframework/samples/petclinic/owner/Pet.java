@@ -17,6 +17,7 @@ package org.springframework.samples.petclinic.owner;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
@@ -95,8 +96,8 @@ public class Pet extends NamedEntity {
         return this.visits;
     }
 
-    protected void setVisitsInternal(Set<Visit> visits) {
-        this.visits = visits;
+    protected void setVisitsInternal(Collection<Visit> visits) {
+        this.visits = new LinkedHashSet<>(visits);
     }
 
     public List<Visit> getVisits() {

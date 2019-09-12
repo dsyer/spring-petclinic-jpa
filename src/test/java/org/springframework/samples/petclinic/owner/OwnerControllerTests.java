@@ -11,10 +11,15 @@ import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
 import org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration;
 import org.springframework.boot.test.autoconfigure.web.reactive.WebFluxTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.samples.petclinic.visit.Visit;
+import org.springframework.samples.petclinic.visit.VisitRepository;
 import org.springframework.test.web.reactive.server.WebTestClient;
 
 import static org.mockito.BDDMockito.given;
 import static org.springframework.web.reactive.function.BodyInserters.fromFormData;
+
+import java.time.LocalDate;
+import java.util.Collections;
 
 /**
  * Test class for {@link OwnerController}
@@ -33,6 +38,9 @@ public class OwnerControllerTests {
 	@MockBean
 	private OwnerRepository owners;
 
+    @MockBean
+    private VisitRepository visits;
+
 	private Owner george;
 
 	@BeforeEach
@@ -44,7 +52,18 @@ public class OwnerControllerTests {
 		george.setAddress("110 W. Liberty St.");
 		george.setCity("Madison");
 		george.setTelephone("6085551023");
-		given(this.owners.findById(TEST_OWNER_ID)).willReturn(george);
+        Pet max = new Pet();
+        PetType dog = new PetType();
+        dog.setName("dog");
+        max.setId(1);
+        max.setType(dog);
+        max.setName("Max");
+        max.setBirthDate(LocalDate.now());
+        george.setPetsInternal(Collections.singleton(max));
+        given(this.owners.findById(TEST_OWNER_ID)).willReturn(george);
+        Visit visit = new Visit();
+        visit.setDate(LocalDate.now());
+        given(this.visits.findByPetId(max.getId())).willReturn(Collections.singletonList(visit));
 	}
 
 	@Test
@@ -122,7 +141,11 @@ public class OwnerControllerTests {
 	public void testShowOwner() throws Exception {
 		client.get().uri("/owners/{ownerId}", TEST_OWNER_ID).exchange().expectStatus()
 				.isOk().expectBody(String.class)
-				.value(Matchers.containsString("Address"));
+				.value(Matchers.containsString("Address"))
+				.value(Matchers.containsString("6085551023"))
+				.value(Matchers.containsString("Madison"))
+				.value(Matchers.containsString("Max"))
+				;
 	}
 
 }
