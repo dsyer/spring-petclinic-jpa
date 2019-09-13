@@ -18,5 +18,39 @@
 		"name": "org.springframework.samples.petclinic.visit.Visit",
 		"allDeclaredConstructors": true,
 		"allDeclaredMethods": true
+	},
+	{
+		"name": "org.springframework.samples.petclinic.owner.JpaPetRepositoryImpl",
+		"allDeclaredConstructors": true,
+		"allDeclaredFields": true,
+		"allDeclaredMethods": true
+	},
+	{
+		"name": "org.springframework.samples.petclinic.owner.JpaOwnerRepositoryImpl",
+		"allDeclaredConstructors": true,
+		"allDeclaredFields": true,
+		"allDeclaredMethods": true
+	},
+	{
+		"name": "org.springframework.samples.petclinic.visit.JpaVisitRepositoryImpl",
+		"allDeclaredConstructors": true,
+		"allDeclaredFields": true,
+		"allDeclaredMethods": true
+	},
+	{
+		"name": "org.springframework.samples.petclinic.vet.JpaVetRepositoryImpl",
+		"allDeclaredConstructors": true,
+		"allDeclaredFields": true,
+		"allDeclaredMethods": true
+	},
+	{
+		"name": "javax.persistence.PersistenceContext",
+		"allDeclaredConstructors": true,
+		"allDeclaredMethods": true
+	},
+	{
+		"name": "org.springframework.stereotype.Repository",
+		"allDeclaredConstructors": true,
+		"allDeclaredMethods": true
 	}
 ]

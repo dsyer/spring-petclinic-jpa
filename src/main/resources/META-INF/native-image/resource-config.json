@@ -1,6 +1,7 @@
 {
   "resources": [
-    {"pattern": ".*.html"},
+    {"pattern": "banner.txt"},
+    {"pattern": "db/.*"},
     {"pattern": "messages/.*"},
     {"pattern": "static/.*"},
     {"pattern": "templates/.*"}
