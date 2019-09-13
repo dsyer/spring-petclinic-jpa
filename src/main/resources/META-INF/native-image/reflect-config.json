@@ -1,5 +1,20 @@
 [
 	{
+		"name": "org.springframework.samples.petclinic.model.NamedEntity",
+		"allDeclaredConstructors": true,
+		"allDeclaredMethods": true
+	},
+	{
+		"name": "org.springframework.samples.petclinic.model.BaseEntity",
+		"allDeclaredConstructors": true,
+		"allDeclaredMethods": true
+	},
+	{
+		"name": "org.springframework.samples.petclinic.model.Person",
+		"allDeclaredConstructors": true,
+		"allDeclaredMethods": true
+	},
+	{
 		"name": "org.springframework.samples.petclinic.owner.Pet",
 		"allDeclaredConstructors": true,
 		"allDeclaredMethods": true
@@ -45,6 +60,36 @@
 	},
 	{
 		"name": "javax.persistence.PersistenceContext",
+		"allDeclaredConstructors": true,
+		"allDeclaredMethods": true
+	},
+	{
+		"name": "javax.persistence.MappedSuperclass",
+		"allDeclaredConstructors": true,
+		"allDeclaredMethods": true
+	},
+	{
+		"name": "javax.persistence.Column",
+		"allDeclaredConstructors": true,
+		"allDeclaredMethods": true
+	},
+	{
+		"name": "javax.persistence.ManyToOne",
+		"allDeclaredConstructors": true,
+		"allDeclaredMethods": true
+	},
+	{
+		"name": "javax.persistence.JoinColumn",
+		"allDeclaredConstructors": true,
+		"allDeclaredMethods": true
+	},
+	{
+		"name": "javax.persistence.Table",
+		"allDeclaredConstructors": true,
+		"allDeclaredMethods": true
+	},
+	{
+		"name": "javax.persistence.Transient",
 		"allDeclaredConstructors": true,
 		"allDeclaredMethods": true
 	},
