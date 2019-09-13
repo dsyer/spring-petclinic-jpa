@@ -52,5 +52,15 @@
 		"name": "org.springframework.stereotype.Repository",
 		"allDeclaredConstructors": true,
 		"allDeclaredMethods": true
+	},
+	{
+		"name": "org.springframework.jdbc.datasource.embedded.EmbeddedDatabase",
+		"allDeclaredConstructors": true,
+		"allDeclaredMethods": true
+	},
+	{
+		"name": "org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory$EmbeddedDataSourceProxy",
+		"allDeclaredConstructors": true,
+		"allDeclaredMethods": true
 	}
 ]

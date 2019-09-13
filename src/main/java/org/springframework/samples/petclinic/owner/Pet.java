@@ -32,6 +32,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 import org.springframework.beans.support.MutableSortDefinition;
 import org.springframework.beans.support.PropertyComparator;
@@ -62,7 +63,7 @@ public class Pet extends NamedEntity {
     @JoinColumn(name = "owner_id")
     private Owner owner;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "petId", fetch = FetchType.EAGER)
+    @Transient
     private Set<Visit> visits = new LinkedHashSet<>();
 
     public void setBirthDate(LocalDate birthDate) {
