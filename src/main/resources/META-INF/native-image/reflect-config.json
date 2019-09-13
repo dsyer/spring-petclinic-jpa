@@ -2,36 +2,43 @@
 	{
 		"name": "org.springframework.samples.petclinic.model.NamedEntity",
 		"allDeclaredConstructors": true,
+		"allDeclaredFields": true,
 		"allDeclaredMethods": true
 	},
 	{
 		"name": "org.springframework.samples.petclinic.model.BaseEntity",
 		"allDeclaredConstructors": true,
+		"allDeclaredFields": true,
 		"allDeclaredMethods": true
 	},
 	{
 		"name": "org.springframework.samples.petclinic.model.Person",
 		"allDeclaredConstructors": true,
+		"allDeclaredFields": true,
 		"allDeclaredMethods": true
 	},
 	{
 		"name": "org.springframework.samples.petclinic.owner.Pet",
 		"allDeclaredConstructors": true,
+		"allDeclaredFields": true,
 		"allDeclaredMethods": true
 	},
 	{
 		"name": "org.springframework.samples.petclinic.owner.Owner",
 		"allDeclaredConstructors": true,
+		"allDeclaredFields": true,
 		"allDeclaredMethods": true
 	},
 	{
 		"name": "org.springframework.samples.petclinic.vet.Vet",
 		"allDeclaredConstructors": true,
+		"allDeclaredFields": true,
 		"allDeclaredMethods": true
 	},
 	{
 		"name": "org.springframework.samples.petclinic.visit.Visit",
 		"allDeclaredConstructors": true,
+		"allDeclaredFields": true,
 		"allDeclaredMethods": true
 	},
 	{
@@ -56,6 +63,11 @@
 		"name": "org.springframework.samples.petclinic.vet.JpaVetRepositoryImpl",
 		"allDeclaredConstructors": true,
 		"allDeclaredFields": true,
+		"allDeclaredMethods": true
+	},
+	{
+		"name": "org.springframework.web.util.HtmlUtils",
+		"allDeclaredConstructors": true,
 		"allDeclaredMethods": true
 	},
 	{
@@ -105,6 +117,31 @@
 	},
 	{
 		"name": "org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory$EmbeddedDataSourceProxy",
+		"allDeclaredConstructors": true,
+		"allDeclaredMethods": true
+	},
+	{
+		"name": "org.hibernate.persister.collection.OneToManyPersister",
+		"allDeclaredConstructors": true,
+		"allDeclaredMethods": true
+	},
+	{
+		"name": "org.hibernate.persister.entity.JoinedSubclassEntityPersister",
+		"allDeclaredConstructors": true,
+		"allDeclaredMethods": true
+	},
+	{
+		"name": "org.hibernate.persister.entity.SingleTableEntityPersister",
+		"allDeclaredConstructors": true,
+		"allDeclaredMethods": true
+	},
+	{
+		"name": "org.hibernate.persister.entity.UnionSubclassEntityPersister",
+		"allDeclaredConstructors": true,
+		"allDeclaredMethods": true
+	},
+	{
+		"name": "org.hibernate.persister.collection.BasicCollectionPersister",
 		"allDeclaredConstructors": true,
 		"allDeclaredMethods": true
 	}

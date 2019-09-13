@@ -4,6 +4,7 @@
     {"pattern": "db/.*"},
     {"pattern": "messages/.*"},
     {"pattern": "static/.*"},
-    {"pattern": "templates/.*"}
+    {"pattern": "templates/.*"},
+    {"pattern": "HtmlCharacterEntityReferences.properties"}
   ]
 }
