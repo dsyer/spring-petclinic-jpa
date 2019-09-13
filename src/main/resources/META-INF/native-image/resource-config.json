@@ -5,6 +5,6 @@
     {"pattern": "messages/.*"},
     {"pattern": "static/.*"},
     {"pattern": "templates/.*"},
-    {"pattern": "HtmlCharacterEntityReferences.properties"}
+    {"pattern": "org/springframework/web/util/HtmlCharacterEntityReferences.properties"}
   ]
 }
